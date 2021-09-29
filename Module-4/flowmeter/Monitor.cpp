@@ -36,6 +36,52 @@ extern float flow;
 extern float temp;
 const char* regs[16] = {"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15"};
 
+typedef struct{
+		const char* command;
+	  const char* information;
+	  void (*fp)();
+}commands_list;
+
+void normal_mode()
+{
+	display_mode = NORMAL;
+  UART_msg_put("\r\nMode=NORMAL\n");
+}
+
+void quiet_mode()
+{
+	display_mode = QUIET;
+  UART_msg_put("\r\nMode=QUIET\n");
+	display_timer = 0;
+}
+
+void debug_mode()
+{
+	display_mode = DEBUG;
+  UART_msg_put("\r\nMode=DEBUG\n");
+	display_timer = 0;
+}
+
+void version()
+{
+	display_mode = VERSION;
+  UART_msg_put("\r\n");
+  UART_msg_put( CODE_VERSION ); 
+  UART_msg_put("\r\nSelect  ");
+	display_timer = 0;
+}
+
+
+commands_list commands[] =
+{
+	{"Normal", "Runs in the normal mode", normal_mode},
+	{"Quiet", " Runs in the quiet mode", quiet_mode},
+	{"Debug", " Runs in the Debug mode", debug_mode},
+	{"Ver", "   Prints the version of the application", version},
+	{"last", "", NULL}
+};
+
+const uint8_t command_list_size = sizeof(commands)/sizeof(commands[0]);
 /*******************************************************************************
 * Set Display Mode Function
 * Function determines the correct display mode.  The 3 display modes operate as 
@@ -56,13 +102,16 @@ const char* regs[16] = {"r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r
 
 void set_display_mode(void)   
 {
-  UART_direct_msg_put("\r\nCommands -  Desciption");
-  UART_direct_msg_put("\r\nNOR - Normal");
-  UART_direct_msg_put("\r\nQUI - Quiet");
-  UART_direct_msg_put("\r\nDEB - Debug" );
-  UART_direct_msg_put("\r\nV - Version#\r\n");
-  UART_direct_msg_put("\r\n> ");
-  
+  UART_direct_msg_put("Commands   Description\r\n");
+	UART_direct_msg_put("------------------------------------\r\n");
+	for(uint8_t i = 0; i < command_list_size-1; i++)
+	{
+		UART_direct_msg_put(commands[i].command);
+		UART_direct_msg_put("   ");
+		UART_direct_msg_put(commands[i].information);
+		UART_direct_msg_put("\r\n");
+	}
+  UART_direct_msg_put(">");
 }
 
 
@@ -76,10 +125,9 @@ void chk_UART_msg(void)
    while( UART_input() )      // becomes true only when a byte has been received
    {                                    // skip if no characters pending
       j = UART_get();                 // get next character
-
+			//UART_put(j);
       if( j == '\r' )          // on a enter (return) key press
       {                // complete message (all messages end in carriage return)
-         UART_msg_put("->");
          UART_msg_process();
       }
       else 
@@ -102,6 +150,7 @@ void chk_UART_msg(void)
          }
 				 if(j == 0x03)
 				 {
+					 display_mode = QUIET;
 					 display_timer = 0;
 					 set_display_mode();
 				 }
@@ -110,21 +159,10 @@ void chk_UART_msg(void)
             UART_msg_put("\r\nToo Long!");
             msg_buf_idx = 0;
          }
-         else if ((display_mode == QUIET) && (msg_buf[0] != 0x02) && 
-                  (msg_buf[0] != 'D') && (msg_buf[0] != 'N') && 
-                  (msg_buf[0] != 'V') &&
-                  (msg_buf_idx != 0))
-         {                          // if first character is bad in Quiet mode
-            msg_buf_idx = 0;        // then start over
-         }
          else {                        // not complete message, store character
  
             msg_buf[msg_buf_idx] = j;
             msg_buf_idx++;
-            if (msg_buf_idx > 2)
-            {
-               UART_msg_process();
-            }
          }
       }
    }
@@ -134,87 +172,44 @@ void chk_UART_msg(void)
 ///  \fn void UART_msg_process(void) 
 ///UART Input Message Processing
 //*****************************************************************************/
+
+int strcmp_array(UCHAR s1[], UCHAR s2[])
+{
+  // TODO: fill in this code
+  int i = 0;
+  for(i = 0; (s1[i] != '\0'); i++)
+  {
+    if(s1[i] != s2[i])
+    {
+      return (s1[i]-s2[i]);
+    }
+  }
+
+  if(s2[i] == '\0')
+    return 0;
+  
+  return -1;
+}
+
 void UART_msg_process(void)
 {
-   UCHAR chr,err=0;
-//   unsigned char  data;
-
-
-   if( (chr = msg_buf[0]) <= 0x60 ) 
-   {      // Upper Case
-      switch( chr ) 
-      {
-         case 'D':
-            if((msg_buf[1] == 'E') && (msg_buf[2] == 'B') && (msg_buf_idx == 3)) 
-            {
-               display_mode = DEBUG;
-               UART_msg_put("\r\nMode=DEBUG\n");
-               display_timer = 0;
-            }
-            else
-               err = 1;
-            break;
-
-         case 'N':
-            if((msg_buf[1] == 'O') && (msg_buf[2] == 'R') && (msg_buf_idx == 3)) 
-            {
-               display_mode = NORMAL;
-               UART_msg_put("\r\nMode=NORMAL\n");
-               //display_timer = 0;
-            }
-            else
-               err = 1;
-            break;
-
-         case 'Q':
-            if((msg_buf[1] == 'U') && (msg_buf[2] == 'I') && (msg_buf_idx == 3)) 
-            {
-               display_mode = QUIET;
-               UART_msg_put("\r\nMode=QUIET\n");
-               display_timer = 0;
-            }
-            else
-               err = 1;
-            break;
-
-         case 'V':
-            display_mode = VERSION;
-            UART_msg_put("\r\n");
-            UART_msg_put( CODE_VERSION ); 
-            UART_msg_put("\r\nSelect  ");
-            display_timer = 0;
-            break;
-                
-         default:
-            err = 1;
-      }
-   }
-
-   else 
-   {                                 // Lower Case
-      switch( chr ) 
-      {
-        default:
-         err = 1;
-      }
-   }
-
-   if( err == 1 )
-   {
-      UART_msg_put("\n\rError!");
-   }   
-   else if( err == 2 )
-   {
-      UART_msg_put("\n\rNot in DEBUG Mode!");
-   }   
-   else
-   {
-    msg_buf_idx = 0;          // put index to start of buffer for next message
-      ;
-   }
-   msg_buf_idx = 0;          // put index to start of buffer for next message
-
-
+	uint8_t i = 0;
+	for(i = 0; i < command_list_size; i++)
+	{
+		if(!strcmp_array((UCHAR*)commands[i].command, msg_buf))
+		{
+			break;
+		}
+		if(!strcmp_array((UCHAR*)commands[i].command, (UCHAR*)commands[command_list_size-1].command))
+		{
+			UART_msg_put("\r\nNo Command found\r\n");
+			msg_buf_idx = 0;
+			return;
+		}
+	}
+	memset(&msg_buf, 0, MSG_BUF_SIZE);
+	commands[i].fp();
+	msg_buf_idx = 0;
 }
 
 
@@ -366,7 +361,6 @@ void monitor(void)
    {
       case(QUIET):
          {
-             UART_msg_put("\r\n ");
              display_flag = 0;
          }  
          break;

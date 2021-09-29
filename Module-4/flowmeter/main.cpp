@@ -50,11 +50,18 @@ Serial pc(USBTX, USBRX);
 //PwmOut _4_20_current(PTE30);
 //PwmOut _pulse(PTE31);
 //SPI lcd_disp(PTD2, PTD3, PTD1, PTD0); // MOSI MISO SCLK CS
+
+/*
+ * @brief Blinks the green LED
+ */
 void flip() 
 {
     greenLED = !greenLED;
 }
 
+/*
+ * @brief blinks the RED LED regularly to indicate hearbeat.
+ */
 void flip_r()  
 {                
     redLED = !redLED;
@@ -62,14 +69,23 @@ void flip_r()
  
 
 float frequnecy = 88.0f, flow = 0.0f;
-
+/*
+ * @brief Main routine used for initialization and driving the
+ *        code. This routine is doing the following
+ *        - Initilizing hardware
+ *        - Starting the Interrupt
+ *        - Polling for console inputs
+ *        - Computing the flow rate
+ *        - Running the hearbeat led
+ * 
+ * Returns: return 1
+ */
 int main() 
 {
 /****************      ECEN 5803 add code as indicated   ***************/
                     //  Add code to call timer0 function every 100 uS
 	  Adc_Init();
 		tick.attach(&timer0, 0.0001);
-    pc.printf("Hello World!\n"); 
     uint32_t  count = 0;
     
 // initialize serial buffer pointers
@@ -111,14 +127,14 @@ int main()
 //  readADC()
 		
 //  calculate flow()
-		flow = calculateFlow(88, Adc_ReadMesaurement(CHANNEL_2));
+		    flow = calculateFlow(frequnecy, Adc_ReadMesaurement(CHANNEL_2));
 		//pc.printf("Flow rate: %f\r\n", flow);
 //  4-20 output ()    // use TMP0 channel 3  proporional rate to flow
-		//_4_20_current.pulsewidth(flow);
+		    //_4_20_current.pulsewidth(flow);
 //  Pulse output()   // use TMP0 channel 4  propotional rate to frequency
-		//_pulse.period_us((float)1.0f/frquency);
+		    //_pulse.period_us((float)1.0f/frquency);
 //  LCD_Display()   // use the SPI port to send flow number
-		//lcd_disp.write((float)flow);
+		    //lcd_disp.write((float)flow);
 //  End ECEN 5803 code addition
 
 
@@ -128,11 +144,12 @@ int main()
 					  SwTimerIsrCounter = 0;
         }
 				if(redLedState)
-				{
+				{	
+						// Toggle Red LED every 500ms to ensure life
 						flip_r();
 					  redLedState = 0;
 				}
     } 
-       
+	  return 1;
 }
 
