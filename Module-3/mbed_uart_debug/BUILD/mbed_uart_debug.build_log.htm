@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sankalp agrawal, gg, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+C:\Users\Sankalp\Documents\GitHub\ECEN5803-Project-1-Flowmeter\Module-3\mbed_uart_debug\mbed_uart_debug.uvprojx
+Project File Date:  09/18/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'mbed_uart_debug'
+compiling timer0.cpp...
+compiling UART_poll.cpp...
+compiling Monitor.cpp...
+Monitor.cpp(359): warning:  #177-D: variable "str"  was declared but never referenced
+  	char str[20];
+Monitor.cpp(321): warning: A1609W: MOV <rd>,pc instruction does not set bit zero, so does not create a return address
+Monitor.cpp: 1 warning, 0 errors
+compiling main.cpp...
+main.cpp(118): warning:  #1-D: last line of file ends without a newline
+  }
+main.cpp: 1 warning, 0 errors
+linking...
+.\BUILD\mbed_uart_debug.axf: Warning: L6320W: Ignoring --keep command. Cannot find argument 'os_cb_sections'.
+Program Size: Code=21224 RO-data=2452 RW-data=140 ZI-data=604  
+Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin -o BUILD/mbed_uart_debug.bin BUILD/mbed_uart_debug.axf
+".\BUILD\mbed_uart_debug.axf" - 0 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_mbed_uart_debug
+  C:\Users\Sankalp\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
