@@ -95,9 +95,13 @@ int main(void){
 	             
   r = my_sqrt(0);     // should be 0
   r = my_sqrt(25);    // should be 5
-	r = my_sqrt(133); 	// should be 11
+  r = my_sqrt(133);   // should be 11
+  r = my_sqrt(2);     // should be 1
+  r = my_sqrt(4);     // should be 2
+  r = my_sqrt(22);    // should be 4
+  r = my_sqrt(121);   // should be 11
   for (i=0; i<10000; i++){
-		r = my_sqrt(i);
+    r = my_sqrt(i);
     j+=r;
   }
 
@@ -105,4 +109,4 @@ int main(void){
 		;
 }
 
-// *******************************ARM University Program Copyright © ARM Ltd 2014*************************************/
+// *******************************ARM University Program Copyright Â© ARM Ltd 2014*************************************/
