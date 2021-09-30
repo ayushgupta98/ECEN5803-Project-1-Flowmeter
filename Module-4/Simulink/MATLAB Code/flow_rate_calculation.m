@@ -9,9 +9,9 @@ function velocity = flow_rate_calculation(frequency, temperature, pid, d)
     density = 1000*(1 - ((temperature + 288.9414)/(508929.2* (temperature + 68.1293))) * ((temperature-3.9862)^2));
     viscosity = (2.4 * 10^(-5)) * (10 ^((247.8/(T - 140))));
     
-    a = 0.0671;
-    b = -1*((0.05368*frequency*d) + (viscosity / (density*pid)));
-    c = (frequency*d)^2;
+    a = 0.0671708648; %(0.07203856 * 0.9324293096)
+    b = -1*((0.5005280534*frequency*d) + ((viscosity / (density*pid)))); %0.5005280534 = 2*0.9324293096*0.2684
+    c = 0.9324293096*((frequency*d)^2);
     
     p = [a b c];
     r = roots(p);
