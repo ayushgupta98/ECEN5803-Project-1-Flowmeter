@@ -1,3 +1,14 @@
+/**
+ * @file flowmeter.cpp
+ * @author Sankalp Agrawal (saag2511@colorado.edu)
+ *         Ayush Gupta (aygu7370@colorado.edu)
+ * @brief Flowmeter computation
+ * @version 0.1
+ * @date 2021-29-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "shared.h"
 #include <stdint.h>
 #include <math.h>
@@ -128,12 +139,12 @@ float calculateFlow(uint32_t freq, uint16_t adc_temp)
 #endif
 #if 0
 	// Get temperature in volt
-	float v_temp = adc_temp*0.00004578f;
+	float v_temp = adc_temp*0.0029296875;
 	// Recognise the m factor
-	float m = (v_temp > 0.716f) ? 0.001646f : 0.001769f;
+	float m = (v_temp > 0.7012f) ? 0.001646f : 0.001749f;
 	// calculate thempertaure in kelvin
 
-	temp = (25.0f - ((v_temp - 0.716f)/m));
+	temp = (25.0f - ((v_temp - 0.7012f)/m));
 #else
 	temp = adc_temp;
 #endif
@@ -142,15 +153,15 @@ float calculateFlow(uint32_t freq, uint16_t adc_temp)
 	// Calculate the viscosity. T is in Celcius
   float density =  (1000.0f - (((temp*1000.0f) + 288941.4f))/ ((508929.2f *temp )+ 34673158.092196f) * pow(temp - 3.9863f, 2.0f));
 	// equations lead to a quadratic formula for which the a, b and c are as follows
-	float a = 0.0671f;
-  float b = -1.0f*((0.05368f*freq*d) + (viscosity / (density*PID)));
-  float c = pow((freq*d), 2);
+	float a = 0.0671708648f;
+  float b = -1.0f*((0.5005280534f*freq*d) + (viscosity / (density*PID)));
+  float c = 0.9324293096f*pow((freq*d), 2);
 	// Real part of the quadratic formula
   float res_1 = (-b/(2.0f*a));
 	// Imaginary part of the quadratic formula
-  float res_2 = sqrt(-1.0f*((b*b) - (4.0f*a*c)))/(2.0f*a);
+  float res_2 = sqrt(((b*b) - (4.0f*a*c)))/(2.0f*a);
 	// Polar form conversion
-  float vel = sqrt((res_1*res_1) + (res_2*res_2));
+  float vel = res_1 + res_2;
 	// Return the flow in gallons per feet
 	return( 2.45f*2.9f*2.9f*vel*3.28f);
 }

@@ -62,7 +62,7 @@
 #define M                       (1620U)     /*! Typical slope: (mV x 1000)/oC */
 #define STANDARD_TEMP           (25)
  enum boolean { FALSE, TRUE };         /// \enum boolean  
- enum dmode {QUIET, NORMAL, DEBUG, VERSION};      /// \enum dmode 
+ enum dmode {QUIET, NORMAL, DEBUG, DREG, DSTACK, DMEMORY, VERSION};      /// \enum dmode 
  
  typedef unsigned char UCHAR;
  typedef unsigned char bit;

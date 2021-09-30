@@ -1,3 +1,15 @@
+/**
+ * @file adc.cpp
+ * @author Sankalp Agrawal (saag2511@colorado.edu)
+ *         Ayush Gupta (aygu7370@colorado.edu)
+ * @brief functions defined in the corresponding h file are populated here
+ * @version 0.1
+ * @date 2021-29-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "shared.h"
 #include "adc.h"
 

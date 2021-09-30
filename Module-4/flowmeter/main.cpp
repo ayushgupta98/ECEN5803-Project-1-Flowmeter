@@ -36,7 +36,6 @@
 #include "adc.h"
 #include "flowmeter.h"
 
-
 extern volatile uint16_t SwTimerIsrCounter; 
 extern volatile uint8_t redLedState; 
 
@@ -69,7 +68,7 @@ void flip_r()
  
 
 float frequnecy = 88.0f, flow = 0.0f;
-/*
+/**
  * @brief Main routine used for initialization and driving the
  *        code. This routine is doing the following
  *        - Initilizing hardware
@@ -78,7 +77,7 @@ float frequnecy = 88.0f, flow = 0.0f;
  *        - Computing the flow rate
  *        - Running the hearbeat led
  * 
- * Returns: return 1
+ * @return return 1
  */
 int main() 
 {
@@ -125,9 +124,9 @@ int main()
    /****************      ECEN 5803 add code as indicated   ***************/
    
 //  readADC()
-		
+		//Adc_ReadMesaurement(CHANNEL_2)
 //  calculate flow()
-		    flow = calculateFlow(frequnecy, Adc_ReadMesaurement(CHANNEL_2));
+		    flow = calculateFlow(frequnecy, 26);
 		//pc.printf("Flow rate: %f\r\n", flow);
 //  4-20 output ()    // use TMP0 channel 3  proporional rate to flow
 		    //_4_20_current.pulsewidth(flow);

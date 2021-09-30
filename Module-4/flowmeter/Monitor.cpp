@@ -45,20 +45,20 @@ typedef struct{
 void normal_mode()
 {
 	display_mode = NORMAL;
-  UART_msg_put("\r\nMode=NORMAL\n");
+  UART_msg_put("\r\nNORMAL\r\n");
 }
 
 void quiet_mode()
 {
 	display_mode = QUIET;
-  UART_msg_put("\r\nMode=QUIET\n");
+  UART_msg_put("\r\nQUIET\r\n");
 	display_timer = 0;
 }
 
 void debug_mode()
 {
 	display_mode = DEBUG;
-  UART_msg_put("\r\nMode=DEBUG\n");
+  UART_msg_put("\r\nDEBUG\r\n");
 	display_timer = 0;
 }
 
@@ -70,14 +70,36 @@ void version()
   UART_msg_put("\r\nSelect  ");
 	display_timer = 0;
 }
+void registers()
+{
+	display_mode = DREG;
+  UART_direct_msg_put("\r\nPrint Registers\r\n");
+	display_timer = 0;
+}
+void stack()
+{
+	display_mode = DSTACK;
+  UART_direct_msg_put("\r\nPrint stack\r\n");
+	display_timer = 0;
+}
+
+void memeory()
+{
+	display_mode = DMEMORY;
+  UART_direct_msg_put("\r\nPrint memory\r\n");
+	display_timer = 0;
+}
 
 
 commands_list commands[] =
 {
-	{"Normal", "Runs in the normal mode", normal_mode},
-	{"Quiet", " Runs in the quiet mode", quiet_mode},
-	{"Debug", " Runs in the Debug mode", debug_mode},
-	{"Ver", "   Prints the version of the application", version},
+	{"normal", "Runs in the normal mode", normal_mode},
+	{"quiet", " Runs in the quiet mode", quiet_mode},
+	{"debug", " Runs in the Debug mode", debug_mode},
+	{"reg", "   Prints Arm Register r0-r15", registers},
+	{"st", "    Prints 16 words from the stack", stack},
+	{"mem", "   prints the memory", memeory},
+	{"ver", "   Prints the version of the application", version},
 	{"last", "", NULL}
 };
 
@@ -148,15 +170,17 @@ void chk_UART_msg(void)
                msg_buf_idx--;
             }
          }
-				 if(j == 0x03)
+				 else if(j == 0x03 || j == 'h')
 				 {
 					 display_mode = QUIET;
 					 display_timer = 0;
 					 set_display_mode();
+					 memset(&msg_buf, 0, MSG_BUF_SIZE);
 				 }
          else if( msg_buf_idx >= MSG_BUF_SIZE )  
          {                                // check message length too large
             UART_msg_put("\r\nToo Long!");
+						memset(&msg_buf, 0, MSG_BUF_SIZE);
             msg_buf_idx = 0;
          }
          else {                        // not complete message, store character
@@ -202,7 +226,10 @@ void UART_msg_process(void)
 		}
 		if(!strcmp_array((UCHAR*)commands[i].command, (UCHAR*)commands[command_list_size-1].command))
 		{
-			UART_msg_put("\r\nNo Command found\r\n");
+			UART_direct_msg_put("\r\n'");
+			UART_direct_msg_put((const char*)msg_buf);
+			UART_direct_msg_put("' command found, press h for the menu!\r\n");
+			memset(&msg_buf, 0, MSG_BUF_SIZE);
 			msg_buf_idx = 0;
 			return;
 		}
@@ -384,7 +411,7 @@ void monitor(void)
                //UART_direct_msg_put(" Temp: ");
                //  add flow data output here, use UART_hex_put or similar for 
                // numbers
-							 sprintf(str, " Temp: %fC", (temp-274.15f));
+							 sprintf(str, " Temp: %fC", (temp));
 							 UART_direct_msg_put(str);
                //UART_direct_msg_put(" Freq: ");
                //  add flow data output here, use UART_hex_put or similar for 
@@ -409,15 +436,21 @@ void monitor(void)
                UART_direct_msg_put(" Temp: ");
                //  add flow data output here, use UART_hex_put or similar for 
                // numbers
-							 sprintf(str, "%f", (temp-274.15f));
+							 sprintf(str, "%f", (temp));
 							 UART_direct_msg_put(str);
                UART_direct_msg_put(" Freq: ");
                //  add flow data output here, use UART_hex_put or similar for 
                // numbers
 							 sprintf(str, "%f\r\n", frequnecy);
 							 UART_direct_msg_put(str);
-               
-               
+							 display_flag = 0;
+						}
+					}
+				  break;
+			case DREG:
+				 {
+					  if (display_flag == 1)
+						{  
  /****************      ECEN 5803 add code as indicated   ***************/             
                //  Create a display of  error counts, sensor states, and
                //  ARM Registers R0-R15
@@ -432,6 +465,15 @@ void monitor(void)
 								 UART_direct_hex_put((regptr&0xFF));
 								 UART_direct_msg_put("\r\n");
 							 }
+							 display_flag = 0;
+							 display_mode = QUIET;
+						}
+				 }
+				 break;
+			case DMEMORY:
+			   {
+					  if (display_flag == 1)
+						{
                //  Create a command to read a section of Memory and display it
 							 
 							 UART_direct_msg_put("Memory layout\r\n");
@@ -449,7 +491,15 @@ void monitor(void)
 								 UART_direct_hex_put((regptr&0xFF));
 							 }
 							 UART_direct_msg_put("\r\n");
-               
+               display_flag = 0;  
+							 display_mode = QUIET;
+						 }	 
+					}
+				  break;
+			case DSTACK:
+			   {
+					   if (display_flag == 1)
+						 {
                //  Create a command to read 16 words from the current stack 
                // and display it in reverse chronological order.
 							 UART_direct_msg_put("Stack\r\n");
@@ -471,6 +521,7 @@ void monitor(void)
               
                // clear flag to ISR      
                display_flag = 0;
+							 display_mode = QUIET;
              }   
          }  
          break;

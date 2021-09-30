@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['r_0',['R',['../struct_a_d_c___type.html#a790459a24adcd854e7d01d2ff34b57f9',1,'ADC_Type']]],
+  ['ra_1',['RA',['../struct_i2_c___type.html#a6e1b24826eb462af336d49e3a1b9f8db',1,'I2C_Type']]],
+  ['ram_5fsize_2',['ram_size',['../structmbed__stats__sys__t.html#a394a9d64b586b1e202634b4f512762ac',1,'mbed_stats_sys_t']]],
+  ['ram_5fstart_3',['ram_start',['../structmbed__stats__sys__t.html#aa113592c0325dbfa0cd5b430779fe41a',1,'mbed_stats_sys_t']]],
+  ['rasr_4',['RASR',['../struct_a_r_m___m_p_u___region__t.html#a38c1d3bc6a9ffc9423d633add01928f1',1,'ARM_MPU_Region_t']]],
+  ['rbar_5',['RBAR',['../struct_a_r_m___m_p_u___region__t.html#afe7a7721aa08988d915670efa432cdd2',1,'ARM_MPU_Region_t']]],
+  ['read_6',['read',['../structticker__interface__t.html#a00991371bd7d4036ae69ce70e7025a9e',1,'ticker_interface_t']]],
+  ['readdata_7',['ReadData',['../struct___a_r_m___d_r_i_v_e_r___s_t_o_r_a_g_e.html#a23c0eaab8c58af86c882ffa47552f840',1,'_ARM_DRIVER_STORAGE']]],
+  ['reciptable_8',['recipTable',['../structarm__lms__norm__instance__q31.html#a85836d0907077b9ac660f7bbbaa9d694',1,'arm_lms_norm_instance_q31::recipTable()'],['../structarm__lms__norm__instance__q15.html#a9aabb0e4c79f3db807e7a441fa36f5f8',1,'arm_lms_norm_instance_q15::recipTable()']]],
+  ['reflect_5fin_9',['reflect_in',['../structcrc__mbed__config.html#a697c10b17870933a62e3b7f7e8c017b0',1,'crc_mbed_config']]],
+  ['reflect_5fout_10',['reflect_out',['../structcrc__mbed__config.html#a256a74be62fc1b93e70f3701347a1995',1,'crc_mbed_config']]],
+  ['regsc_11',['REGSC',['../struct_p_m_c___type.html#a23fa3c271bf9f25b06221b037553f936',1,'PMC_Type']]],
+  ['reqc_5farr_12',['REQC_ARR',['../struct_d_m_a___type.html#a7ac091b9fdd1549241f15ca387b1025e',1,'DMA_Type']]],
+  ['reserved_5fsize_13',['reserved_size',['../structmbed__stats__heap__t.html#ab85a4b75d00f1a8cd035d8678c6d94e8',1,'mbed_stats_heap_t::reserved_size()'],['../structmbed__stats__stack__t.html#ae3a433b6bcafd03285ae5f9b239a2695',1,'mbed_stats_stack_t::reserved_size()']]],
+  ['resolveaddress_14',['ResolveAddress',['../struct___a_r_m___d_r_i_v_e_r___s_t_o_r_a_g_e.html#a369c2ce89fd4728925f42cbe9c311ac5',1,'_ARM_DRIVER_STORAGE']]],
+  ['rev_15',['REV',['../struct_u_s_b___type.html#aebfcc05a57aa51e7cdeb38d058ccd5f1',1,'USB_Type']]],
+  ['rlar_16',['RLAR',['../struct_a_r_m___m_p_u___region__t.html#ab5d3a650dbffd0b272bf7df5b140e8a8',1,'ARM_MPU_Region_t']]],
+  ['rollback_5fprotection_17',['rollback_protection',['../struct___a_r_m___s_t_o_r_a_g_e___s_e_c_u_r_i_t_y___f_e_a_t_u_r_e_s.html#a60edd0a9a04d7ecd5108bae691d05bb7',1,'_ARM_STORAGE_SECURITY_FEATURES']]],
+  ['rom_5fsize_18',['rom_size',['../structmbed__stats__sys__t.html#ab21fab89f60b2d58743952e053dc9822',1,'mbed_stats_sys_t']]],
+  ['rom_5fstart_19',['rom_start',['../structmbed__stats__sys__t.html#a3809ab7c5f218906466940197a68870c',1,'mbed_stats_sys_t']]],
+  ['rpfc_20',['RPFC',['../struct_r_c_m___type.html#ad0261f1d5010d46de000a3a9714b4c6d',1,'RCM_Type']]],
+  ['rpfw_21',['RPFW',['../struct_r_c_m___type.html#a449e78f6ff13d0f186b722a140027d6b',1,'RCM_Type']]],
+  ['rx_5fbuffer_22',['rx_buffer',['../structmbed_1_1transaction__t.html#a56698177b98a193cdea584d5d9e83a51',1,'mbed::transaction_t']]],
+  ['rx_5flength_23',['rx_length',['../structmbed_1_1transaction__t.html#afefd7a94e22cadc29445edc25d33ff68',1,'mbed::transaction_t']]]
+];
