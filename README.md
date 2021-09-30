@@ -5,7 +5,15 @@ This Project has a 4 part objective:
 3. Module-3 : Setup UART Console for for the KL25Z.
 4. Module-4 : Capture frequency and temperature from the ADC and compute the flow rate (gallons/min)
 
-Also a Dhrystone benchmarking has to be performed on this microcontroller to caluclate the speed of the microcontroller.    
+## Block Diagram of the System
+<br>Screenshot:  
+   ![block_diagram](Module-4/Block%20Diagram/Flowmeter%20Solution%20Block%20Diagram.jpg)
+
+## Simulink result for the given requirements
+<br>Screenshot:  
+   ![block_diagram](Module-4/Simulink/simulink%20result.jpg)
+
+Also a Dhrystone benchmarking has to be performed on this microcontroller to calculate the speed of the microcontroller.    
 
 ## Authors  
 1. Sankalp Agrawal - saag2511@colorado.edu   
