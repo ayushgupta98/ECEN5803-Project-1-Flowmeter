@@ -98,7 +98,8 @@ extern "C" {
    volatile    UCHAR swtimer7 = 0; 
 
   volatile uint16_t SwTimerIsrCounter = 0U;
-	volatile uint8_t heartBeat = 72U; 
+	volatile uint8_t heartBeat = 78U; 
+	volatile uint8_t redLedState = 0; 
   UCHAR  display_timer = 0;  // 1 second software timer for display   
   UCHAR  display_flag = 0;   // flag between timer interrupt and monitor.c, like
                         // a binary semaphore      
@@ -258,10 +259,11 @@ void timer0(void)
  
     //ECEN 5803 add code as indicated
     // Create an 0.5 second RED LED heartbeat here. 
-			heartBeat--;
+		heartBeat--;
 		if(!heartBeat)
 		{
-			heartBeat = 72;
+			heartBeat = 78U;
+			redLedState = !redLedState;
 		}
  
 

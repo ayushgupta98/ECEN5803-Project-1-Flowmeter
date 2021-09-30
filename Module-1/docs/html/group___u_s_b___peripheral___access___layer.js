@@ -1,0 +1,36 @@
+var group___u_s_b___peripheral___access___layer =
+[
+    [ "USB Register Masks", "group___u_s_b___register___masks.html", null ],
+    [ "USB_Type", "struct_u_s_b___type.html", [
+      [ "ADDINFO", "struct_u_s_b___type.html#a7271c06f949d448fa10196e2bb10bd93", null ],
+      [ "ADDR", "struct_u_s_b___type.html#a8705f1ca0cd919f17cdd610a401de206", null ],
+      [ "BDTPAGE1", "struct_u_s_b___type.html#ae38659ba2c226f6bbe8618f9a2437ba3", null ],
+      [ "BDTPAGE2", "struct_u_s_b___type.html#af2c91cae21a7dc71675b828c242ff14a", null ],
+      [ "BDTPAGE3", "struct_u_s_b___type.html#a37e2eedfdddb0094778c619167cac252", null ],
+      [ "CONTROL", "struct_u_s_b___type.html#a093d9b4052a399ff21b6694034333f08", null ],
+      [ "CTL", "struct_u_s_b___type.html#ad66155614624c6dbd95f696e1a9f0f35", null ],
+      [ "ENDPT", "struct_u_s_b___type.html#ae31e5076afa4cee3a94c6b57b374426a", null ],
+      [ "ERREN", "struct_u_s_b___type.html#a29f6538d60be550166683242c93649a7", null ],
+      [ "ERRSTAT", "struct_u_s_b___type.html#af3e1c49392d797dfdc81155e0b37a80b", null ],
+      [ "FRMNUMH", "struct_u_s_b___type.html#a5d81326ef75b015cfa68f73b9c8434bf", null ],
+      [ "FRMNUML", "struct_u_s_b___type.html#af0454bfe2e97064f2b6bd616350ec802", null ],
+      [ "IDCOMP", "struct_u_s_b___type.html#afff047b66a448cfa17baf6acf33fd58a", null ],
+      [ "INTEN", "struct_u_s_b___type.html#afbe12dd614f13edb2741464672b0d411", null ],
+      [ "ISTAT", "struct_u_s_b___type.html#aaea8dad14f2d470b66a880384aef09d8", null ],
+      [ "OBSERVE", "struct_u_s_b___type.html#aa8cbc53b1ddc255d7be917ba3fc6b1f1", null ],
+      [ "OTGCTL", "struct_u_s_b___type.html#a29fdcad4635573158769b379244874c6", null ],
+      [ "OTGICR", "struct_u_s_b___type.html#ac63531ec3a52f634997a5f27a938232e", null ],
+      [ "OTGISTAT", "struct_u_s_b___type.html#a33ddb4989093727ebbeaabdcbb30a9be", null ],
+      [ "OTGSTAT", "struct_u_s_b___type.html#adb73c0ed8ec05b05499d164fee6a6d9c", null ],
+      [ "PERID", "struct_u_s_b___type.html#a2e5e3896393e567c46fbcfe1ea92bade", null ],
+      [ "REV", "struct_u_s_b___type.html#aebfcc05a57aa51e7cdeb38d058ccd5f1", null ],
+      [ "SOFTHLD", "struct_u_s_b___type.html#a5567027779ec927376c0d8a60d53fb24", null ],
+      [ "STAT", "struct_u_s_b___type.html#a54025377f3daec606230cd235bd81916", null ],
+      [ "TOKEN", "struct_u_s_b___type.html#a58b9187d7f4a00613210eae025612065", null ],
+      [ "USBCTRL", "struct_u_s_b___type.html#a7d0fdec2bab11d450d49677fc0bf729c", null ],
+      [ "USBTRC0", "struct_u_s_b___type.html#a0381c5afae0f997f54326c00e494d71c", null ]
+    ] ],
+    [ "USB0", "group___u_s_b___peripheral___access___layer.html#gaea56c015ce8ad0cc88464060fde6d87c", null ],
+    [ "USB0_BASE", "group___u_s_b___peripheral___access___layer.html#gaa47acf4992407a85e79d911ca1055d17", null ],
+    [ "USB_BASES", "group___u_s_b___peripheral___access___layer.html#ga6deffe292fb1e6e508badb0ab4cd4e5f", null ]
+];

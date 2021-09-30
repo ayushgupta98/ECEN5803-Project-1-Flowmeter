@@ -109,7 +109,7 @@ void serial(void)       // The serial function polls the serial port for
    
    if (TXIF)          //  Check if transmit buffer empty  
    {
-      if ((tx_in_ptr != tx_out_ptr) && (display_mode != QUIET))
+      if ((tx_in_ptr != tx_out_ptr))
       {
          TXREG = *tx_out_ptr++;     /* send next char */
          if( tx_out_ptr >= TX_BUF_SIZE + tx_buf )
