@@ -188,7 +188,7 @@ F (mbed/drivers/UARTSerial.h)(0x5C70A0EE)()
 F (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/us_ticker.o)(0x5C70974A)()
 F (mbed/hal/us_ticker_api.h)(0x5C70A0EE)()
 F (mbed/platform/wait_api.h)(0x5C70A0F0)()
-F (main.cpp)(0x61555D60)(--cpp -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections -I /usr/src/mbed-sdk -I mbed -I mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD -I mbed/drivers -I mbed/hal -I mbed/platform --no_rtti --cpu=Cortex-M0plus -c --split_sections --no_depend_system_headers --md --gnu --apcs=interwork --preinclude=mbed_config.h-I.\RTE\_mems-IC:\Users\Sankalp\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DMKL25Z128xxx4 -DTOOLCHAIN_ARM_STD -DMBED_MINIMAL_PRINTF -DDEVICE_PORTOUT="1" -DDEVICE_ANALOGIN="1" -DMBED_RAM_SIZE="0x4000" -DDEVICE_I2CSLAVE="1" -DDEVICE_SPI="1" -DDEVICE_ANALOGOUT="1" -DTARGET_NAME="KL25Z" -DTARGET_LIKE_CORTEX_M0 -DDEVICE_INTERRUPTIN="1" -D__CORTEX_M0PLUS -DDEVICE_PORTIN="1" -DTOOLCHAIN_ARMC6 -DMBED_ROM_START="0x0" -DMULADDC_CANNOT_USE_R7 -DDEVICE_USTICKER="1" -DDEVICE_SEMIHOST="1" -DTARGET_KL25Z -DDEVICE_SPISLAVE="1" -DTARGET_KLXX -D__MBED_CMSIS_RTOS_CM -DDEVICE_I2C="1" -DMBED_RAM_START="0x1ffff000" -DTARGET_M0P -DMBED_ROM_SIZE="0x20000" -DTARGET_FF_ARDUINO -DMBED_TRAP_ERRORS_ENABLED="1" -DARM_MATH_CM0PLUS -D__CMSIS_RTOS -DDEVICE_SLEEP="1" -DDEVICE_PORTINOUT="1" -DDEVICE_STDIO_MESSAGES="1" -DTARGET_RELEASE -DTOOLCHAIN_ARM -DTARGET_LIKE_MBED -DTARGET_CORTEX_M -DDEVICE_SERIAL="1" -DTARGET_Freescale -D__MBED__="1" -DTARGET_CORTEX -DMBED_BUILD_TIMESTAMP="1632882893.5222263" -D__ASSERT_MSG -DDEVICE_PWMOUT="1"-o .\build\main.o --omf_browse .\build\main.crf --depend .\build\main.d)
+F (main.cpp)(0x6155E2F1)(--cpp -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections -I /usr/src/mbed-sdk -I mbed -I mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD -I mbed/drivers -I mbed/hal -I mbed/platform --no_rtti --cpu=Cortex-M0plus -c --split_sections --no_depend_system_headers --md --gnu --apcs=interwork --preinclude=mbed_config.h-I.\RTE\_mems-IC:\Users\Sankalp\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DMKL25Z128xxx4 -DTOOLCHAIN_ARM_STD -DMBED_MINIMAL_PRINTF -DDEVICE_PORTOUT="1" -DDEVICE_ANALOGIN="1" -DMBED_RAM_SIZE="0x4000" -DDEVICE_I2CSLAVE="1" -DDEVICE_SPI="1" -DDEVICE_ANALOGOUT="1" -DTARGET_NAME="KL25Z" -DTARGET_LIKE_CORTEX_M0 -DDEVICE_INTERRUPTIN="1" -D__CORTEX_M0PLUS -DDEVICE_PORTIN="1" -DTOOLCHAIN_ARMC6 -DMBED_ROM_START="0x0" -DMULADDC_CANNOT_USE_R7 -DDEVICE_USTICKER="1" -DDEVICE_SEMIHOST="1" -DTARGET_KL25Z -DDEVICE_SPISLAVE="1" -DTARGET_KLXX -D__MBED_CMSIS_RTOS_CM -DDEVICE_I2C="1" -DMBED_RAM_START="0x1ffff000" -DTARGET_M0P -DMBED_ROM_SIZE="0x20000" -DTARGET_FF_ARDUINO -DMBED_TRAP_ERRORS_ENABLED="1" -DARM_MATH_CM0PLUS -D__CMSIS_RTOS -DDEVICE_SLEEP="1" -DDEVICE_PORTINOUT="1" -DDEVICE_STDIO_MESSAGES="1" -DTARGET_RELEASE -DTOOLCHAIN_ARM -DTARGET_LIKE_MBED -DTARGET_CORTEX_M -DDEVICE_SERIAL="1" -DTARGET_Freescale -D__MBED__="1" -DTARGET_CORTEX -DMBED_BUILD_TIMESTAMP="1632882893.5222263" -D__ASSERT_MSG -DDEVICE_PWMOUT="1"-o .\build\main.o --omf_browse .\build\main.crf --depend .\build\main.d)
 I (mbed_config.h)(0x6154261C)
 I (mbed\mbed.h)(0x5C70A0EE)
 I (mbed\platform/mbed_version.h)(0x5C70A0F0)
@@ -293,6 +293,7 @@ I (mbed\platform/mbed_stats.h)(0x5C70A0F0)
 I (mbed\platform/FunctionPointer.h)(0x5C70A0F0)
 I (mbed\platform/ScopedLock.h)(0x5C70A0F0)
 I (MMA.h)(0x61555D5B)
+I (tsi_sensor.h)(0x6155E139)
 F (mbed_config.h)(0x6154261C)()
 F (MMA.cpp)(0x61555D0B)(--cpp -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections -I /usr/src/mbed-sdk -I mbed -I mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD -I mbed/drivers -I mbed/hal -I mbed/platform --no_rtti --cpu=Cortex-M0plus -c --split_sections --no_depend_system_headers --md --gnu --apcs=interwork --preinclude=mbed_config.h-I.\RTE\_mems-IC:\Users\Sankalp\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DMKL25Z128xxx4 -DTOOLCHAIN_ARM_STD -DMBED_MINIMAL_PRINTF -DDEVICE_PORTOUT="1" -DDEVICE_ANALOGIN="1" -DMBED_RAM_SIZE="0x4000" -DDEVICE_I2CSLAVE="1" -DDEVICE_SPI="1" -DDEVICE_ANALOGOUT="1" -DTARGET_NAME="KL25Z" -DTARGET_LIKE_CORTEX_M0 -DDEVICE_INTERRUPTIN="1" -D__CORTEX_M0PLUS -DDEVICE_PORTIN="1" -DTOOLCHAIN_ARMC6 -DMBED_ROM_START="0x0" -DMULADDC_CANNOT_USE_R7 -DDEVICE_USTICKER="1" -DDEVICE_SEMIHOST="1" -DTARGET_KL25Z -DDEVICE_SPISLAVE="1" -DTARGET_KLXX -D__MBED_CMSIS_RTOS_CM -DDEVICE_I2C="1" -DMBED_RAM_START="0x1ffff000" -DTARGET_M0P -DMBED_ROM_SIZE="0x20000" -DTARGET_FF_ARDUINO -DMBED_TRAP_ERRORS_ENABLED="1" -DARM_MATH_CM0PLUS -D__CMSIS_RTOS -DDEVICE_SLEEP="1" -DDEVICE_PORTINOUT="1" -DDEVICE_STDIO_MESSAGES="1" -DTARGET_RELEASE -DTOOLCHAIN_ARM -DTARGET_LIKE_MBED -DTARGET_CORTEX_M -DDEVICE_SERIAL="1" -DTARGET_Freescale -D__MBED__="1" -DTARGET_CORTEX -DMBED_BUILD_TIMESTAMP="1632882893.5222263" -D__ASSERT_MSG -DDEVICE_PWMOUT="1"-o .\build\mma.o --omf_browse .\build\mma.crf --depend .\build\mma.d)
 I (mbed_config.h)(0x6154261C)
@@ -400,3 +401,109 @@ I (mbed\platform/mbed_stats.h)(0x5C70A0F0)
 I (mbed\platform/FunctionPointer.h)(0x5C70A0F0)
 I (mbed\platform/ScopedLock.h)(0x5C70A0F0)
 F (MMA.h)(0x61555D5B)()
+F (.\tsi_sensor.cpp)(0x6155E140)(--cpp -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections -I /usr/src/mbed-sdk -I mbed -I mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD -I mbed/drivers -I mbed/hal -I mbed/platform --no_rtti --cpu=Cortex-M0plus -c --split_sections --no_depend_system_headers --md --gnu --apcs=interwork --preinclude=mbed_config.h-I.\RTE\_mems-IC:\Users\Sankalp\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DMKL25Z128xxx4 -DTOOLCHAIN_ARM_STD -DMBED_MINIMAL_PRINTF -DDEVICE_PORTOUT="1" -DDEVICE_ANALOGIN="1" -DMBED_RAM_SIZE="0x4000" -DDEVICE_I2CSLAVE="1" -DDEVICE_SPI="1" -DDEVICE_ANALOGOUT="1" -DTARGET_NAME="KL25Z" -DTARGET_LIKE_CORTEX_M0 -DDEVICE_INTERRUPTIN="1" -D__CORTEX_M0PLUS -DDEVICE_PORTIN="1" -DTOOLCHAIN_ARMC6 -DMBED_ROM_START="0x0" -DMULADDC_CANNOT_USE_R7 -DDEVICE_USTICKER="1" -DDEVICE_SEMIHOST="1" -DTARGET_KL25Z -DDEVICE_SPISLAVE="1" -DTARGET_KLXX -D__MBED_CMSIS_RTOS_CM -DDEVICE_I2C="1" -DMBED_RAM_START="0x1ffff000" -DTARGET_M0P -DMBED_ROM_SIZE="0x20000" -DTARGET_FF_ARDUINO -DMBED_TRAP_ERRORS_ENABLED="1" -DARM_MATH_CM0PLUS -D__CMSIS_RTOS -DDEVICE_SLEEP="1" -DDEVICE_PORTINOUT="1" -DDEVICE_STDIO_MESSAGES="1" -DTARGET_RELEASE -DTOOLCHAIN_ARM -DTARGET_LIKE_MBED -DTARGET_CORTEX_M -DDEVICE_SERIAL="1" -DTARGET_Freescale -D__MBED__="1" -DTARGET_CORTEX -DMBED_BUILD_TIMESTAMP="1632882893.5222263" -D__ASSERT_MSG -DDEVICE_PWMOUT="1"-o .\build\tsi_sensor.o --omf_browse .\build\tsi_sensor.crf --depend .\build\tsi_sensor.d)
+I (mbed_config.h)(0x6154261C)
+I (mbed\mbed.h)(0x5C70A0EE)
+I (mbed\platform/mbed_version.h)(0x5C70A0F0)
+I (mbed\platform/mbed_toolchain.h)(0x5C70A0F0)
+I (mbed\platform/mbed_preprocessor.h)(0x5C70A0F0)
+I (mbed\platform/platform.h)(0x5C70A0F0)
+I (mbed\platform/mbed_retarget.h)(0x5C70A0F0)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/device.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/objects.h)(0x5C70974A)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/cmsis.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/MKL25Z4.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/core_cm0plus.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/cmsis_version.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/cmsis_compiler.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/cmsis_armcc.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/system_MKL25Z4.h)(0x5C70974A)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/cmsis_nvic.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/PortNames.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/PeripheralNames.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/PinNames.h)(0x5C709748)
+I (mbed/TARGET_KL25Z/TOOLCHAIN_ARM_STD/gpio_object.h)(0x5C709748)
+I (mbed/platform/mbed_assert.h)(0x5C70A0F0)
+I (mbed\platform/mbed_application.h)(0x5C70A0F0)
+I (mbed\platform/mbed_error.h)(0x5C70A0F0)
+I (mbed\platform/mbed_interface.h)(0x5C70A0F0)
+I (mbed\platform/mbed_debug.h)(0x5C70A0F0)
+I (mbed\drivers/DigitalIn.h)(0x5C70A0EC)
+I (mbed\hal/gpio_api.h)(0x5C70A0EE)
+I (mbed\platform/mbed_critical.h)(0x5C70A0F0)
+I (mbed\drivers/DigitalOut.h)(0x5C70A0EC)
+I (mbed\drivers/DigitalInOut.h)(0x5C70A0EC)
+I (mbed\drivers/BusIn.h)(0x5C70A0EC)
+I (mbed\platform/PlatformMutex.h)(0x5C70A0F0)
+I (mbed\platform/NonCopyable.h)(0x5C70A0F0)
+I (mbed\drivers/BusOut.h)(0x5C70A0EC)
+I (mbed\drivers/BusInOut.h)(0x5C70A0EC)
+I (mbed\drivers/PortIn.h)(0x5C70A0EE)
+I (mbed\hal/port_api.h)(0x5C70A0EE)
+I (mbed\drivers/PortInOut.h)(0x5C70A0EE)
+I (mbed\drivers/PortOut.h)(0x5C70A0EE)
+I (mbed\drivers/AnalogIn.h)(0x5C70A0EC)
+I (mbed\hal/analogin_api.h)(0x5C70A0EE)
+I (mbed\platform/SingletonPtr.h)(0x5C70A0F0)
+I (mbed\drivers/AnalogOut.h)(0x5C70A0EC)
+I (mbed\hal/analogout_api.h)(0x5C70A0EE)
+I (mbed\drivers/PwmOut.h)(0x5C70A0EE)
+I (mbed\hal/pwmout_api.h)(0x5C70A0EE)
+I (mbed\platform/mbed_power_mgmt.h)(0x5C70A0F0)
+I (mbed\hal/sleep_api.h)(0x5C70A0EE)
+I (mbed\hal/ticker_api.h)(0x5C70A0EE)
+I (mbed\drivers/Serial.h)(0x5C70A0EE)
+I (mbed\platform/Stream.h)(0x5C70A0F0)
+I (mbed\platform/FileLike.h)(0x5C70A0F0)
+I (mbed\platform/FileBase.h)(0x5C70A0F0)
+I (mbed\platform/FileHandle.h)(0x5C70A0F0)
+I (mbed\platform/Callback.h)(0x5C70A0EE)
+I (mbed\platform/mbed_poll.h)(0x5C70A0F0)
+I (mbed\drivers/SerialBase.h)(0x5C70A0EE)
+I (mbed\hal/serial_api.h)(0x5C70A0EE)
+I (mbed\hal/buffer.h)(0x5C70A0EE)
+I (mbed\hal/dma_api.h)(0x5C70A0EE)
+I (mbed\drivers/SPI.h)(0x5C70A0EE)
+I (mbed\hal/spi_api.h)(0x5C70A0EE)
+I (mbed\drivers/SPISlave.h)(0x5C70A0EE)
+I (mbed\drivers/I2C.h)(0x5C70A0EC)
+I (mbed\hal/i2c_api.h)(0x5C70A0EE)
+I (mbed\drivers/I2CSlave.h)(0x5C70A0EC)
+I (mbed\drivers/Ethernet.h)(0x5C70A0EC)
+I (mbed\drivers/CAN.h)(0x5C70A0EC)
+I (mbed\drivers/RawSerial.h)(0x5C70A0EE)
+I (mbed\drivers/UARTSerial.h)(0x5C70A0EE)
+I (mbed\drivers/InterruptIn.h)(0x5C70A0EC)
+I (mbed\hal/gpio_irq_api.h)(0x5C70A0EE)
+I (mbed\platform/CircularBuffer.h)(0x5C70A0EE)
+I (mbed\drivers/FlashIAP.h)(0x5C70A0EC)
+I (mbed\drivers/MbedCRC.h)(0x5C70A0EE)
+I (mbed\drivers/TableCRC.h)(0x5C70A0EE)
+I (mbed\hal/crc_api.h)(0x5C70A0EE)
+I (mbed\drivers/QSPI.h)(0x5C70A0EE)
+I (mbed\drivers/Timer.h)(0x5C70A0EE)
+I (mbed\drivers/Ticker.h)(0x5C70A0EE)
+I (mbed\drivers/TimerEvent.h)(0x5C70A0EE)
+I (mbed\hal/us_ticker_api.h)(0x5C70A0EE)
+I (mbed\hal/lp_ticker_api.h)(0x5C70A0EE)
+I (mbed\drivers/Timeout.h)(0x5C70A0EE)
+I (mbed\drivers/LowPowerTimeout.h)(0x5C70A0EC)
+I (mbed\drivers/LowPowerTicker.h)(0x5C70A0EC)
+I (mbed\drivers/LowPowerTimer.h)(0x5C70A0EE)
+I (mbed\platform/LocalFileSystem.h)(0x5C70A0F0)
+I (mbed\platform/mbed_wait_api.h)(0x5C70A0F0)
+I (mbed\platform/mbed_rtc_time.h)(0x5C70A0F0)
+I (mbed\platform/ATCmdParser.h)(0x5C70A0EE)
+I (mbed\platform/FileSystemHandle.h)(0x5C70A0F0)
+I (mbed\platform/DirHandle.h)(0x5C70A0EE)
+I (mbed\platform/CriticalSectionLock.h)(0x5C70A0EE)
+I (mbed\platform/DeepSleepLock.h)(0x5C70A0EE)
+I (mbed\platform/ScopedRomWriteLock.h)(0x5C70A0F0)
+I (mbed\platform/mbed_mpu_mgmt.h)(0x5C70A0F0)
+I (mbed\hal/mpu_api.h)(0x5C70A0EE)
+I (mbed\platform/ScopedRamExecutionLock.h)(0x5C70A0F0)
+I (mbed\platform/mbed_stats.h)(0x5C70A0F0)
+I (mbed\platform/FunctionPointer.h)(0x5C70A0F0)
+I (mbed\platform/ScopedLock.h)(0x5C70A0F0)
+I (tsi_sensor.h)(0x6155E139)
+F (.\tsi_sensor.h)(0x6155E139)()
