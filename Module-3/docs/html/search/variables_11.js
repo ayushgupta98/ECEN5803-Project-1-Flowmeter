@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['r_0',['R',['../struct_a_d_c___type.html#a790459a24adcd854e7d01d2ff34b57f9',1,'ADC_Type']]],
+  ['ra_1',['RA',['../struct_i2_c___type.html#a6e1b24826eb462af336d49e3a1b9f8db',1,'I2C_Type']]],
+  ['read_2',['read',['../structticker__interface__t.html#a00991371bd7d4036ae69ce70e7025a9e',1,'ticker_interface_t']]],
+  ['readdata_3',['ReadData',['../struct___a_r_m___d_r_i_v_e_r___s_t_o_r_a_g_e.html#a23c0eaab8c58af86c882ffa47552f840',1,'_ARM_DRIVER_STORAGE']]],
+  ['reciptable_4',['recipTable',['../structarm__lms__norm__instance__q31.html#a85836d0907077b9ac660f7bbbaa9d694',1,'arm_lms_norm_instance_q31::recipTable()'],['../structarm__lms__norm__instance__q15.html#a9aabb0e4c79f3db807e7a441fa36f5f8',1,'arm_lms_norm_instance_q15::recipTable()']]],
+  ['regsc_5',['REGSC',['../struct_p_m_c___type.html#a23fa3c271bf9f25b06221b037553f936',1,'PMC_Type']]],
+  ['reqc_5farr_6',['REQC_ARR',['../struct_d_m_a___type.html#a7ac091b9fdd1549241f15ca387b1025e',1,'DMA_Type']]],
+  ['reserved1_7',['reserved1',['../group___c_m_s_i_s___c_o_r_e.html#ga268939f602ca41cb4f1f71d7f0eae806',1,'APSR_Type::reserved1()'],['../group___c_m_s_i_s___c_o_r_e.html#gaf066e945e7f2f27b964cda72690c1578',1,'APSR_Type::@7::reserved1()']]],
+  ['reserved_5fsize_8',['reserved_size',['../structmbed__stats__heap__t.html#ab85a4b75d00f1a8cd035d8678c6d94e8',1,'mbed_stats_heap_t::reserved_size()'],['../structmbed__stats__stack__t.html#ae3a433b6bcafd03285ae5f9b239a2695',1,'mbed_stats_stack_t::reserved_size()']]],
+  ['resolveaddress_9',['ResolveAddress',['../struct___a_r_m___d_r_i_v_e_r___s_t_o_r_a_g_e.html#a369c2ce89fd4728925f42cbe9c311ac5',1,'_ARM_DRIVER_STORAGE']]],
+  ['rev_10',['REV',['../struct_u_s_b___type.html#aebfcc05a57aa51e7cdeb38d058ccd5f1',1,'USB_Type']]],
+  ['rollback_5fprotection_11',['rollback_protection',['../struct___a_r_m___s_t_o_r_a_g_e___s_e_c_u_r_i_t_y___f_e_a_t_u_r_e_s.html#a60edd0a9a04d7ecd5108bae691d05bb7',1,'_ARM_STORAGE_SECURITY_FEATURES']]],
+  ['rpfc_12',['RPFC',['../struct_r_c_m___type.html#ad0261f1d5010d46de000a3a9714b4c6d',1,'RCM_Type']]],
+  ['rpfw_13',['RPFW',['../struct_r_c_m___type.html#a449e78f6ff13d0f186b722a140027d6b',1,'RCM_Type']]],
+  ['rx_5fbuffer_14',['rx_buffer',['../group__platform.html#ga56698177b98a193cdea584d5d9e83a51',1,'mbed::transaction_t']]],
+  ['rx_5flength_15',['rx_length',['../group__platform.html#gafefd7a94e22cadc29445edc25d33ff68',1,'mbed::transaction_t']]]
+];

@@ -36,7 +36,7 @@
 #undef MAIN
 
 extern volatile uint16_t SwTimerIsrCounter; 
-extern volatile uint8_t heartBeat; 
+extern volatile uint8_t redLedState; 
 
 
 Ticker tick;             //  Creates a timer interrupt using mbed methods
@@ -64,7 +64,6 @@ int main()
 /****************      ECEN 5803 add code as indicated   ***************/
                     //  Add code to call timer0 function every 100 uS
 		tick.attach(&timer0, 0.0001);
-    pc.printf("Hello World!\r\n"); 
     uint32_t  count = 0;   
 
 // initialize serial buffer pointers
@@ -107,10 +106,13 @@ int main()
     
         {
             flip();  // Toggle Green LED
+					  SwTimerIsrCounter = 0;
         }
-				if(heartBeat == 72)
-				{
+				if(redLedState)
+				{	
+						// Toggle Red LED every 500ms to ensure life
 						flip_r();
+					  redLedState = 0;
 				}
    
     } 

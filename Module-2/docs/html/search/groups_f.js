@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['sau_20functions_0',['SAU Functions',['../group___c_m_s_i_s___core___s_a_u_functions.html',1,'']]],
+  ['scopedlock_20functions_1',['ScopedLock functions',['../group__platform___scoped_lock.html',1,'']]],
+  ['sim_20peripheral_20access_20layer_2',['SIM Peripheral Access Layer',['../group___s_i_m___peripheral___access___layer.html',1,'']]],
+  ['sim_20register_20masks_3',['SIM Register Masks',['../group___s_i_m___register___masks.html',1,'']]],
+  ['singletonptr_20class_4',['SingletonPtr class',['../group__platform___singleton_ptr.html',1,'']]],
+  ['sleep_20manager_20api_5',['Sleep manager API',['../group__hal__sleep__manager.html',1,'']]],
+  ['sleep_20manager_20api_20tests_6',['Sleep manager API tests',['../group__hal__sleep__manager__tests.html',1,'']]],
+  ['smc_20peripheral_20access_20layer_7',['SMC Peripheral Access Layer',['../group___s_m_c___peripheral___access___layer.html',1,'']]],
+  ['smc_20register_20masks_8',['SMC Register Masks',['../group___s_m_c___register___masks.html',1,'']]],
+  ['span_20class_9',['Span class',['../group__platform___span.html',1,'']]],
+  ['spi_20peripheral_20access_20layer_10',['SPI Peripheral Access Layer',['../group___s_p_i___peripheral___access___layer.html',1,'']]],
+  ['spi_20register_20masks_11',['SPI Register Masks',['../group___s_p_i___register___masks.html',1,'']]],
+  ['spm_20hal_20api_12',['SPM HAL API',['../group___s_p_m-_h_a_l.html',1,'']]],
+  ['square_20root_13',['Square Root',['../group___s_q_r_t.html',1,'']]],
+  ['statistics_20functions_14',['Statistics Functions',['../group__group_stats.html',1,'']]],
+  ['stats_20functions_15',['stats functions',['../group__platform__stats.html',1,'']]],
+  ['status_20and_20control_20registers_16',['Status and Control Registers',['../group___c_m_s_i_s___c_o_r_e.html',1,'']]],
+  ['stream_20class_17',['Stream class',['../group__platform___stream.html',1,'']]],
+  ['support_20functions_18',['Support Functions',['../group__group_support.html',1,'']]],
+  ['system_20control_20block_20_28scb_29_19',['System Control Block (SCB)',['../group___c_m_s_i_s___s_c_b.html',1,'']]],
+  ['system_20controls_20not_20in_20scb_20_28scnscb_29_20',['System Controls not in SCB (SCnSCB)',['../group___c_m_s_i_s___s_cn_s_c_b.html',1,'']]],
+  ['system_20tick_20timer_20_28systick_29_21',['System Tick Timer (SysTick)',['../group___c_m_s_i_s___sys_tick.html',1,'']]],
+  ['systick_20functions_22',['SysTick Functions',['../group___c_m_s_i_s___core___sys_tick_functions.html',1,'']]]
+];
