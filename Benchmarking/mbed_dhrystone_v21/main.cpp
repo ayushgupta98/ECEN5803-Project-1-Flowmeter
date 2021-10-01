@@ -151,8 +151,8 @@ int main ()
   }
   pc.printf ("\r\nPlease give the number of runs through the benchmark: ");
   {
-    int n = 10000000;
-    //scanf ("%d", &n);
+    int n = 0;
+    scanf ("%d", &n);
     Number_Of_Runs = n;
   }
   pc.printf ("\n");

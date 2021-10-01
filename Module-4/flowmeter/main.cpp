@@ -124,9 +124,13 @@ int main()
    /****************      ECEN 5803 add code as indicated   ***************/
    
 //  readADC()
-		//Adc_ReadMesaurement(CHANNEL_2)
+		uint16_t vref = Adc_ReadMesaurement(CHANNEL_0);
+		uint16_t temp = Adc_ReadMesaurement(CHANNEL_2);
+		float v1 = vref*3.3f/65536;                               //Convert v1 to Volts
+    float v2 = temp*3300.0f/65536;                            //Convert v2 to millivolts
+    float temp_t = 25.0f-(v2-716)*1000.0f/1620;                  //Calculate temp in Celsius
 //  calculate flow()
-		    flow = calculateFlow(frequnecy, 26);
+		    flow = calculateFlow(frequnecy, temp_t);
 		//pc.printf("Flow rate: %f\r\n", flow);
 //  4-20 output ()    // use TMP0 channel 3  proporional rate to flow
 		    //_4_20_current.pulsewidth(flow);

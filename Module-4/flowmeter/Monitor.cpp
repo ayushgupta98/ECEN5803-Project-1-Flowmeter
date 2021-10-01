@@ -411,7 +411,7 @@ void monitor(void)
                //UART_direct_msg_put(" Temp: ");
                //  add flow data output here, use UART_hex_put or similar for 
                // numbers
-							 sprintf(str, " Temp: %fC", (temp));
+							 sprintf(str, " Temp: %5.2fC", (temp));
 							 UART_direct_msg_put(str);
                //UART_direct_msg_put(" Freq: ");
                //  add flow data output here, use UART_hex_put or similar for 
