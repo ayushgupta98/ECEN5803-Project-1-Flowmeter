@@ -14,26 +14,27 @@ This Project has a 4 part objective:
    ![block_diagram](Module-4/Simulink/simulink%20result.jpg)
 
 ## Lab Setup
-<br>Picture 1
+<br>Picture 1</br>
    ![block_diagram](Lab Setup\lab_1.jpg)
  
-<br>Picture 2
+ 
+<br>Picture 2</br>
    ![block_diagram](Lab Setup\lab_2.jpg) 
    
 ## Test Results
 <br>Module 1</br>
 	![block_diagram](Module-1/test%20results/Input_1.jpg)
-	![block_diagram](Module-1/test%20results/output_1.jpg)
+	![block_diagram](Module-1/test%20results/output_1.png)
 	
 <br>Module 2</br>
-	![block_diagram](Module-2/test%20results/Accelerometer Working.mp4)
-	![block_diagram](Module-2/test%20results/Touch Sensor working.mp4)
+	![block_diagram](Module-2/test%20results/Accelerometer%20Working.mp4)
+	![block_diagram](Module-2/test%20results/Touch%20Sensor%20working.mp4)
 
 <br>Module 3</br>
-	![block_diagram](Module-3/test%20results/uart debug monitor.jpg)
+	![block_diagram](Module-3/test%20results/uart%20debug%20monitor.jpg)
 	
 <br>Module 4</br>
-	![block_diagram](Module-4/test%20results/uart monitor.jpg)
+	![block_diagram](Module-4/test%20results/uart%20monitor.jpg)
 
 Also a Dhrystone benchmarking has to be performed on this microcontroller to calculate the speed of the microcontroller.    
 
