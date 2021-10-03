@@ -103,4 +103,3 @@
 .\build\main.o: mbed\platform/FunctionPointer.h
 .\build\main.o: mbed\platform/ScopedLock.h
 .\build\main.o: MMA.h
-.\build\main.o: tsi_sensor.h
