@@ -15,11 +15,11 @@ This Project has a 4 part objective:
 
 ## Lab Setup
 <br>Picture 1</br>
-   ![block_diagram](Lab%20Setup\lab_1.jpg)
+   ![block_diagram](Lab%20Setup/lab_1.jpg)
  
  
 <br>Picture 2</br>
-   ![block_diagram](Lab%20Setup\lab_2.jpg) 
+   ![block_diagram](Lab%20Setup/lab_2.jpg) 
    
 ## Test Results
 <br>Module 1</br>
@@ -28,10 +28,10 @@ This Project has a 4 part objective:
 	
 <br>Module 2</br>
 <br>Accelerometer</br>
-	https://github.com/sankalp123321/ECEN5803-Project-1-Flowmeter/blob/main/Module-2/test%20results/Accelerometer%20Working.mp4
+	[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://github.com/sankalp123321/ECEN5803-Project-1-Flowmeter/blob/main/Module-2/test%20results/Accelerometer%20Working.mp4)
 	
 <br>Touch Sensor</br>
-	https://github.com/sankalp123321/ECEN5803-Project-1-Flowmeter/blob/main/Module-2/test%20results/Touch%20Sensor%20working.mp4
+	[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://github.com/sankalp123321/ECEN5803-Project-1-Flowmeter/blob/main/Module-2/test%20results/Touch%20Sensor%20working.mp4)
 	
 <br>Module 3</br>
 	![block_diagram](Module-3/test%20results/uart%20debug%20monitor.jpg)
