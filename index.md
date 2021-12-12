@@ -1,37 +1,53 @@
-## Welcome to GitHub Pages
+# ECEN5803-Project-1-Flowmeter   
+This Project has a 4 part objective: 
+1. **Module-1** : Write a function to compute the square root of a number in Assembly.
+2. **Module-2** : Integrate FRDM-KL25Z's onboard I2C accelerometer and touch sensor.   
+3. **Module-3** : Setup UART Console for for the KL25Z.
+4. **Module-4** : Capture frequency and temperature from the ADC and compute the flow rate (gallons/min)
 
-You can use the [editor on GitHub](https://github.com/ayushgupta98/ECEN5803-Project-1-Flowmeter/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Block Diagram of the System
+**Block Diagram of Vortex Flowmeter:**  
+   ![block_diagram](Block%20Diagram/Flowmeter%20Solution%20Block%20Diagram.jpg)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Simulink result for the given requirements
+**Simulink Result:**
+   ![block_diagram](Module-4/Simulink/simulink%20result.jpg)
 
-### Markdown
+## Lab Setup
+<br>**Picture 1**
+   ![block_diagram](Lab%20Setup/lab_1.jpg)
+ 
+ 
+<br>**Picture 2**
+   ![block_diagram](Lab%20Setup/lab_2.jpg) 
+   
+## Test Results
+**Module 1**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![block_diagram](Module-1/test%20results/Input_1.jpg)
+![block_diagram](Module-1/test%20results/output_1.png)
+	
+**Module 2**
 
-```markdown
-Syntax highlighted code block
+**Accelerometer**
+	
+https://user-images.githubusercontent.com/89823539/135736051-3db2ded9-d385-4d4c-8936-907ed5d5b13f.mp4
 
-# Header 1
-## Header 2
-### Header 3
+**Touch Sensor**
 
-- Bulleted
-- List
+https://user-images.githubusercontent.com/89823539/135735993-83b68997-0e55-494a-aa63-1a107f066dde.mp4
+	
+**Module 3**
 
-1. Numbered
-2. List
+![block_diagram](Module-3/test%20results/uart%20debug%20monitor.jpg)
+	
+<br>**Module 4**
 
-**Bold** and _Italic_ and `Code` text
+![block_diagram](Module-4/test%20results/uart%20monitor.jpg)
 
-[Link](url) and ![Image](src)
-```
+Also a Dhrystone benchmarking has to be performed on this microcontroller to calculate the speed of the microcontroller.    
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ayushgupta98/ECEN5803-Project-1-Flowmeter/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Authors  
+1. Sankalp Agrawal - saag2511@colorado.edu   
+2. Ayush Gupta - aygu7370@colorado.edu
+out.
